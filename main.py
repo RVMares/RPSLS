@@ -1,3 +1,6 @@
-from player import Player
+from rpsls_platform import Rpsls_Platform
 
-player_one = Player('Ruth')
+main_game = Rpsls_Platform()
+
+main_game.run_game()
+
