@@ -45,5 +45,15 @@ class Rpsls_Platform:
             print (' ')
             self.choose_players()
 
+    def battle_phase(self):
+        print('Choose 0 for Rock')
+        print('Choose 1 for Paper')
+        print('Choose 2 for Scissors')
+        print('Choose 3 for Lizard')
+        print('Choose 4 for Spock')
+        Human.choose_gesture(self)
+         
+    def display_winner(self):
+        pass
 
     #Comparison if self.player_one.chosen_gesture = 'RocK" and self.player_two.choosen_gesture = "Paper" +1 self.player two score

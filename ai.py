@@ -5,8 +5,7 @@ class AI(Player):
     def __init__(self, name):
         super().__init__(name)
         self.name = name
-        self.score = 0
-        self.chosen_gesture = self.choose_gesture()
+        
 
     def choose_gesture(self):
         gesture_list = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
