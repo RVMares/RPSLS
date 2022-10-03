@@ -1,19 +1,26 @@
 from human import Human
 from ai import AI
+from time import sleep
 
 
 class Rpsls_Platform:
     def __init__(self):
         self.player_one = Human('Player One')
         self.player_two = ''
+
     def run_game(self):
         self.display_welcome()
+        sleep(1)
         self.display_rules()
+        sleep(1)
         self.choose_players()
+        sleep(1)
         winner = self.battle_phase()
         self.display_winner(winner)
+        self.play_again()
 
     def display_welcome(self):
+        sleep(1)
         print ('Welcome Player One!')
         print ('In a moment you will choose your opponent.')
         print ('I will explain the rules first.')
@@ -22,6 +29,7 @@ class Rpsls_Platform:
         print (' ')
     
     def display_rules(self):
+        sleep(1)
         print ('First player to get 2 points wins the game!')
         print (' ')
         print ('Rock crushes Scissors')
@@ -34,11 +42,13 @@ class Rpsls_Platform:
         print ('Lizard eats Paper')
         print ('Paper disproves Spock')
         print ('Spock vaporizes Rock')
+        sleep(1)
         print (' ')
         print ('Use the number keys to make your choices')
         print (' ')
     
     def choose_players(self):
+        sleep(1)
         print ('For one player, press 1')
         print ('For two players, press 2')
         total_players = input ('How many players? ')
@@ -53,6 +63,7 @@ class Rpsls_Platform:
             self.choose_players()
 
     def battle_phase(self):
+        sleep(1)
         print('Choose 0 for Rock')
         print('Choose 1 for Paper')
         print('Choose 2 for Scissors')
@@ -183,9 +194,20 @@ class Rpsls_Platform:
 
          
     def display_winner(self, winner):
+        sleep(1)
         print (f'{winner.name} Wins!')
-        let_us_play_again = input ('Do you want to play again? Y/N ')
-        if let_us_play_again == 'Y':
+        
+    def play_again(self):
+        sleep(1)
+        let_us_play_again = input ('Do you want to play again? Y/N ').lower()
+        if let_us_play_again == 'y':
+            self.player_one.score = 0
+            self.player_two.score = 0
             self.run_game()
-        else:
+        elif let_us_play_again == 'n':
+            sleep(1)
             print ('Goodbye!')
+        else:
+            sleep(1)
+            print ('I do not understand')
+            self.play_again()
