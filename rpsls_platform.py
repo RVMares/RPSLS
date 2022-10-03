@@ -66,103 +66,126 @@ class Rpsls_Platform:
             self.player_two.choose_gesture()
             print (' ')
             if self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Paper':
-                print('Player Two wins this round!')
+                print ('Paper covers Rock')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Scissors':
-                print('Player One wins this round!')
+                print ('Rock crushes Scissors')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Lizard':
-                print('Player One wins this round!')
+                print ('Rock crushes Lizard')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Spock':
-                print('Player Two wins this round!')
+                print ('Spock vaporizes Rock')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
 
             elif self.player_one.chosen_gesture == 'Paper' and self.player_two.chosen_gesture == 'Rock':
-                print('Player One wins this round!')
+                print ('Paper covers Rock')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Paper' and self.player_two.chosen_gesture == 'Scissors':
-                print('Player Two wins this round!')
+                print ('Scissors cuts Paper')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Paper' and self.player_two.chosen_gesture == 'Lizard':
-                print('Player Two wins this round!')
+                print ('Lizard eats Paper')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Paper' and self.player_two.chosen_gesture == 'Spock':
-                print('Player One wins this round!')
+                print ('Paper disproves Spock')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
 
             elif self.player_one.chosen_gesture == 'Scissors' and self.player_two.chosen_gesture == 'Rock':
-                print('Player Two wins this round!')
+                print ('Rock crushes Scissors')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Scissors' and self.player_two.chosen_gesture == 'Paper':
-                print('Player One wins this round!')
+                print ('Scissors cuts Paper')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Scissors' and self.player_two.chosen_gesture == 'Lizard':
-                print('Player One wins this round!')
+                print ('Scissors decapitates Lizard')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Scissors' and self.player_two.chosen_gesture == 'Spock':
-                print('Player Two wins this round!')
+                print ('Spock smashes Scissors')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
 
             elif self.player_one.chosen_gesture == 'Lizard' and self.player_two.chosen_gesture == 'Rock':
-                print('Player Two wins this round!')
+                print ('Rock crushes Lizard')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Lizard' and self.player_two.chosen_gesture == 'Paper':
-                print('Player One wins this round!')
+                print ('Lizard eats Paper')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Lizard' and self.player_two.chosen_gesture == 'Scissors':
-                print('Player Two wins this round!')
+                print ('Scissors decapitates Lizard')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Lizard' and self.player_two.chosen_gesture == 'Spock':
-                print('Player One wins this round!')
+                print ('Lizard poisons Spock')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
 
             elif self.player_one.chosen_gesture == 'Spock' and self.player_two.chosen_gesture == 'Rock':
-                print('Player One wins this round!')
+                print ('Spock vaporizes Rock')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Spock' and self.player_two.chosen_gesture == 'Paper':
-                print('Player Two wins this round!')
+                print ('Paper disproves Spock')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             elif self.player_one.chosen_gesture == 'Spock' and self.player_two.chosen_gesture == 'Scissors':
-                print('Player One wins this round!')
+                print ('Spock smashes Scissors')
+                print ('Player One wins this round!')
                 print (' ')
                 self.player_one.score += 1
             elif self.player_one.chosen_gesture == 'Spock' and self.player_two.chosen_gesture == 'Lizard':
-                print('Player Two wins this round!')
+                print ('Lizard poisons Spock')
+                print ('Player Two wins this round!')
                 print (' ')
                 self.player_two.score += 1
             
             elif self.player_one.chosen_gesture == self.player_two.chosen_gesture:
-                print ('We have a tie!')
+                print ('This round is a tie!')
                 print (' ')
                 self.player_one.score += 0
                 self.player_two.score += 0
             
             if self.player_one.score == 2 and self.player_two.score <2:
-                print ('Player One Wins! Try again next time Player Two.')
                 return self.player_one
             elif self.player_two.score == 2 and self.player_one.score < 2:
-                print ('Player Two wins! Try again next time Player One.')
                 return self.player_two
 
          
     def display_winner(self, winner):
-        pass
+        print (f'{winner.name} Wins!')
+        let_us_play_again = input ('Do you want to play again? Y/N ')
+        if let_us_play_again == 'Y':
+            self.run_game()
+        else:
+            print ('Goodbye!')
